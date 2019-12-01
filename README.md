@@ -6,9 +6,9 @@ Advent of Code is an Advent calendar of small programming puzzles for a variety 
 
 ## Credits
 
-Puzzles, Code, & Design: Eric Wastl
+<b>Puzzles, Code, & Design:</b> Eric Wastl
 
-Beta Testing:
+<b>Beta Testing:</b>
 
 * Tim Giannetti
 * Ben Lucek
@@ -16,6 +16,6 @@ Beta Testing:
 * Aneurysm9
 * Andrew Skalski
 
-Community Managers: Danielle Lucek and Aneurysm9
+<b>Community Managers:</b> Danielle Lucek and Aneurysm9
 
-Playing: You!
+<b>Playing:</b> You!
