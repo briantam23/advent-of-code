@@ -1,5 +1,3 @@
-const input = require('../input/inputDay1');
-
 /*
 --- Day 1: The Tyranny of the Rocket Equation ---
 Santa has become stranded at the edge of the Solar System while delivering presents to other planets! 
@@ -30,6 +28,9 @@ then add together all the fuel values.
 
 What is the sum of the fuel requirements for all of the modules on your spacecraft?
 */
+
+const input = require('../input/day1');
+
 
 const calcFuel = amount => Math.floor(amount / 3) - 2;
 

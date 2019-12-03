@@ -1,6 +1,3 @@
-const input = require('../input/inputDay1');
-const calcFuel = require('./day1Part1');
-
 /*
 --- Part Two ---
 During the second Go / No Go poll, 
@@ -32,6 +29,9 @@ What is the sum of the fuel requirements for all of the modules on your spacecra
 when also taking into account the mass of the added fuel? 
 (Calculate the fuel requirements for each module separately, then add them all up at the end.)
 */
+
+const input = require('../input/day1');
+const calcFuel = require('./day1Part1');
 
 
 const totalFuel = input => (
