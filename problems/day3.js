@@ -53,3 +53,17 @@ R98,U47,R26,D63,R33,U87,L62,D20,R33,U53,R51
 U98,R91,D20,R16,D67,R40,U7,R15,U6,R7 = distance 135
 What is the Manhattan distance from the central port to the closest intersection?
 */
+
+const input = require('../input/day3');
+
+
+const [input1, input2] = input.split('\n');
+const input1Arr = input1.split(',');
+const input2Arr = input2.split(',');
+//console.log(input1Arr.slice(0, 5), input2Arr.slice(0, 5))
+let x1 = 0, x2 = 0;
+let y1 = 0, y2 = 0;
+const maxArrLen = Math.max(input1Arr.length, input2Arr.length);
+for(let i = 0; i < maxArrLen; i++) {
+    l
+}
