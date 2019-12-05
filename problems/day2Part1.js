@@ -83,14 +83,38 @@ What value is left at position 0 after the program halts?
 const input = require('../input/day2');
 
 
-const inputArr = input.split(',').map(el => parseInt(el));
+const restoreState = (input, param1, param2) => {
+    const inputArr = input.split(',').map(el => parseInt(el));
 
-// Restore the gravity assist program (puzzle input) to the "1202 program alarm" state 
-// Use slice to avoid mutating original array & get first element
-let previousState = inputArr.slice(0, 1);  
-previousState.push(12)
-previousState.push(2);
-// Use concat to obtain the rest of the array
-previousState = previousState.concat(inputArr.slice(3)); // 
+    // Restore the gravity assist program (puzzle input) to the "1202 program alarm" state 
+    // Use slice to avoid mutating original array & get first element
+    let prevState = inputArr.slice(0, 1);  
+    prevState.push(param1)
+    prevState.push(param2);
+    // Use concat to obtain the rest of the array
+    return prevState = prevState.concat(inputArr.slice(3));
+}
 
-console.log(previousState);
+const runProgram = input => {
+    for(let i = 0; i < input.length; i += 4) {
+    
+        let opCode = input[i];
+        let param1Idx = input[i + 1];
+        let param2Idx = input[i + 2];
+        let updateIdx = input[i + 3];
+    
+        if(opCode === 1) input[updateIdx] = input[param1Idx] + input[param2Idx];
+        else if(opCode === 2) input[updateIdx] = input[param1Idx] * input[param2Idx];
+        else break;
+    }
+    return input;
+}
+
+const restoredState = restoreState(input, 12, 2);
+const updatedState = runProgram(restoredState);
+const output = updatedState[0];
+
+//console.log(output);
+
+
+module.exports = { restoreState, runProgram };
