@@ -67,3 +67,6 @@ const findValidPasswordCount = (min, max) => {
 }
 
 console.log(findValidPasswordCount(min, max));
+
+
+module.exports = checkDecrease;
